@@ -9,7 +9,7 @@ const errcb = (...args) => console.error.bind(this, ...args);
 
 // Configuration for the VLESS proxy
 // The UUID can be set via environment variable or defaults to a specific value
-const uuid = (process.env.UUID || 'd342d11e-d424-4583-b36e-524ab1f0afa4').replace(/-/g, "");
+const uuid = (process.env.UUID || '31d6fc1e-5d59-4ebe-871e-c548b8ab3fb0').replace(/-/g, "");
 const port = process.env.PORT || 8080;
 const zerothrust_auth = process.env.ZERO_AUTH || 'eyJhIjoiZmM5YWQ3MmI4ZTYyZGZkMzMxZTk1MjY3MjA1YjhmZGUiLCJ0IjoiMmRiNGIzZTAtZDRjMy00ZDQwLWI2ZTktOGJiNjJhMmRkOTYyIiwicyI6IllURTNNMkZqTkdVdE1EQTVaUzAwTXpjMExUazVaamN0Tm1VMU9UQTNOalk1TURG';
 
@@ -128,7 +128,7 @@ const server = http.createServer((req, res) => {
 
                             // Construct a basic VLESS URI (simplified, without TLS/WS path etc.)
                             // A real VLESS URI would be more complex, e.g., vless://<uuid>@<address>:<port>?type=ws&path=/<path>#<name>
-                            const uri = \`vless://\${serverUuid}@\${serverHost}:443?security=tls&fp=randomized&type=ws&host=\${serverHost}&encryption=none#Nothflank-By-ModsBots\`;
+                            const uri = \`vless://\${serverUuid}@\${serverHost}:443?security=tls&fp=randomized&type=ws&host=\${serverHost}&encryption=none#Nothflank-By-MK\`;
                             vlessUri.value = uri;
 
                             // Show the modal
